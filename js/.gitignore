@@ -1,0 +1,14 @@
+# Zależności (najważniejsze!)
+node_modules
+
+# Pliki wynikowe z procesu budowania (Vite stworzy ten folder)
+dist
+
+# Pliki logów
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db

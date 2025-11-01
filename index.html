@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal Edukacyjny — Kanatek Land & Mały Naukowiec Lab</title>
+    <meta name="description" content="Jedno miejsce dla dwóch marek edukacyjnych: Kanatek Land (8–14) oraz Mały Naukowiec Lab (4–8). Wybierz przygodę!">
+
+    <!-- Google Fonts: Poppins & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+
+<body>
+
+    <!-- =================================================================== -->
+    <!-- ===================== PORTAL SELECTION PAGE ======================= -->
+    <!-- =================================================================== -->
+    <section id="portal-page">
+        <header class="portal-header">
+            <h1>Gdzie Zaczyna Się Twoja Przygoda?</h1>
+            <p>Wybierz świat dopasowany do wieku i pasji Twojego dziecka.</p>
+        </header>
+
+        <div class="portal-cards">
+            <div class="portal-card" id="portal-mnl" data-target="maly-naukowiec-page" role="button" tabindex="0" aria-label="Przejdź do Mały Naukowiec Lab">
+                <div class="logo-container">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h2>Mały Naukowiec Lab</h2>
+                <p class="tagline">Zbudź w dziecku duszę odkrywcy przez radosne i bezpieczne eksperymenty.</p>
+                <span class="cta-portal">Wejdź do Laboratorium</span>
+            </div>
+            <div class="portal-card" id="portal-kl" data-target="kanatek-land-page" role="button" tabindex="0" aria-label="Przejdź do Kanatek Land">
+                <div class="logo-container">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h2>Kanatek Land</h2>
+                <p class="tagline">Zamień pasję do gier i technologii w realne umiejętności przyszłości.</p>
+                <span class="cta-portal">Wejdź do Świata Kodu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ========================= KANATEK LAND PAGE ========================= -->
+    <!-- =================================================================== -->
+    <section id="kanatek-land-page" style="display:none">
+        <a href="#kl-main-content" class="sr-only">Przejdź do treści</a>
+        <!-- KL Header -->
+        <header class="kl-header">
+            <div class="container">
+                <nav class="kl-nav" aria-label="Główna nawigacja Kanatek Land">
+                    <div class="kl-brand" role="button" tabindex="0">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Kanatek Land</span>
+                    </div>
+                    <ul class="kl-nav-links" id="kl-nav-links">
+                        <li><a href="#kl-hero">Start</a></li>
+                        <li><a href="#kl-about">O nas</a></li>
+                        <li><a href="#kl-courses">Kursy i warsztaty</a></li>
+                        <li><a href="#kl-shop">Sklep</a></li>
+                        <li><a href="#kl-blog">Blog</a></li>
+                        <li><a href="#kl-contact">Kontakt</a></li>
+                    </ul>
+                    <div class="kl-nav-actions">
+                        <form class="kl-search-form" role="search" id="kl-search-form">
+                            <label for="kl-search-input" class="sr-only">Szukaj na stronie</label>
+                            <input type="search" id="kl-search-input" placeholder="Szukaj...">
+                        </form>
+                        <button class="cart-btn" aria-label="Otwórz koszyk" id="open-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-badge" aria-hidden="true">0</span>
+                        </button>
+                        <button class="btn btn-primary kl-open-trial-modal-btn">Lekcja próbna</button>
+                    </div>
+                    <button class="kl-hamburger" id="kl-hamburger-btn" aria-expanded="false" aria-controls="kl-nav-links">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main id="kl-main-content">
+            <!-- KL Hero -->
+            <section id="kl-hero">
+                <div class="container">
+                    <div class="kl-hero-content">
+                        <div class="kl-hero-text">
+                            <span class="eyebrow">Wiek 8–14 lat • Zajęcia praktyczne i online</span>
+                            <h1>Witamy w Kanatek Land — gdzie spełniają się marzenia o STEAM!</h1>
+                            <p class="lead">Uwolnij kreatywność i ciekawość każdego dziecka dzięki zabawnej robotyce, przygodom z programowaniem, drukowi 3D, sztuce cyfrowej i projektom inżynieryjnym.</p>
+                            <div class="cta-buttons">
+                                <a href="#kl-courses" class="btn btn-primary">Zobacz kursy</a>
+                                <button class="btn btn-secondary kl-open-trial-modal-btn">Zapisz się na bezpłatną lekcję</button>
+                            </div>
+                        </div>
+                        <div class="kl-hero-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7948b4?q=80&w=800" alt="Dziecko pracujące z robotem edukacyjnym" loading="eager" fetchpriority="high" decoding="async">
+                            <div class="floating-icon icon1"><i class="fa-solid fa-robot"></i></div>
+                            <div class="floating-icon icon2"><i class="fa-solid fa-code"></i></div>
+                            <div class="floating-icon icon3"><i class="fa-solid fa-palette"></i></div>
+                            <div class="floating-icon icon4"><i class="fa-solid fa-cubes"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL About -->
+            <section id="kl-about" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>O nas</h2>
+                        <p>Jesteśmy pasjonatami technologii i edukacji, którzy wierzą, że każde dziecko ma w sobie potencjał do tworzenia niesamowitych rzeczy. Naszym celem jest dostarczenie narzędzi i wiedzy w inspirujący i przystępny sposób.</p>
+                    </div>
+                    <div class="kl-values-grid">
+                        <div class="kl-value-card">
+                            <i class="fa-solid fa-rocket"></i>
+                            <h3>Nasza misja</h3>
+                            <p>Inspirowanie następnego pokolenia innowatorów, twórców i liderów poprzez praktyczną edukację STEAM.</p>
+                        </div>
+                        <div class="kl-value-card">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <h3>Jak uczymy</h3>
+                            <p>Poprzez projekty, eksperymenty i zabawę. Uczymy myślenia problemowego i współpracy, a nie tylko kodowania.</p>
+                        </div>
+                        <div class="kl-value-card">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <h3>Dla rodzin i szkół</h3>
+                            <p>Oferujemy kursy indywidualne, warsztaty grupowe oraz programy partnerskie dla placówek edukacyjnych.</p>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align:center; margin-bottom:40px;">Kamienie milowe</h3>
+                    <div class="kl-timeline">
+                        <div class="timeline-item reveal">
+                            <div class="timeline-content">
+                                <h4>2021</h4>
+                                <p>Start Kanatek Land z pierwszymi warsztatami z robotyki.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-content">
+                                <h4>2023</h4>
+                                <p>Otwarcie nowej pracowni z drukarkami 3D i rozszerzenie oferty o kursy online.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-content">
+                                <h4>2024</h4>
+                                <p>Partnerstwo z 10 szkołami i uruchomienie platformy e-learningowej.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal">
+                            <div class="timeline-content">
+                                <h4>2025</h4>
+                                <p>Wprowadzenie kursów ze sztucznej inteligencji i rozszerzonej rzeczywistości.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Courses -->
+            <section id="kl-courses" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Kursy i warsztaty</h2>
+                        <p>Wybierz swoją przygodę! Filtrowalnie według tematu lub wieku, aby znaleźć idealne zajęcia.</p>
+                    </div>
+
+                    <div class="kl-filters">
+                        <fieldset id="category-filters">
+                            <legend class="sr-only">Filtruj po kategorii</legend>
+                            <label><input type="checkbox" value="robotyka" checked> Robotyka</label>
+                            <label><input type="checkbox" value="programowanie" checked> Programowanie</label>
+                            <label><input type="checkbox" value="druk-3d" checked> Druk 3D</label>
+                            <label><input type="checkbox" value="sztuka-cyfrowa" checked> Sztuka cyfrowa</label>
+                            <label><input type="checkbox" value="inzynieria" checked> Inżynieria</label>
+                        </fieldset>
+                        <div>
+                            <label for="age-filter">Wiek:</label>
+                            <select id="age-filter">
+                                <option value="all">Wszystkie</option>
+                                <option value="5-7">5–7 lat</option>
+                                <option value="8-10">8–10 lat</option>
+                                <option value="11-14">11–14 lat</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="kl-courses-grid">
+                        <article class="course-card searchable-item" data-category="robotyka" data-age="8-10">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1616182173992-076191a0c33a?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">8–10 lat</span><span class="meta-pill">Robotyka</span>
+                                </div>
+                                <h3>Robotyka dla początkujących</h3>
+                                <p>Zbuduj i zaprogramuj swojego pierwszego robota. Świetna zabawa i nauka podstaw mechaniki.</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$129 / 6 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Robotyka dla początkujących">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="course-card searchable-item" data-category="programowanie" data-age="11-14">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">11–14 lat</span><span class="meta-pill">Programowanie</span>
+                                </div>
+                                <h3>Przygody z programowaniem</h3>
+                                <p>Twórz własne gry i animacje w Scratch i Pythonie. Rozwijaj logiczne myślenie i kreatywność.</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$149 / 8 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Przygody z programowaniem">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="course-card searchable-item" data-category="sztuka-cyfrowa" data-age="8-10">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">8–10 lat</span><span class="meta-pill">Sztuka cyfrowa</span>
+                                </div>
+                                <h3>Sztuka z AI</h3>
+                                <p>Naucz się tworzyć niesamowite grafiki i obrazy z pomocą narzędzi sztucznej inteligencji.</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$119 / 5 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Sztuka z AI">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="course-card searchable-item" data-category="druk-3d" data-age="11-14">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1610996881585-155e8e5c0861?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">11–14 lat</span><span class="meta-pill">Druk 3D</span>
+                                </div>
+                                <h3>Laboratorium druku 3D</h3>
+                                <p>Projektuj modele 3D od podstaw i ożywiaj je za pomocą naszych nowoczesnych drukarek.</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$169 / 8 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Laboratorium druku 3D">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="course-card searchable-item" data-category="robotyka" data-age="5-7">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">5–7 lat</span><span class="meta-pill">Robotyka</span>
+                                </div>
+                                <h3>Mali odkrywcy technologii</h3>
+                                <p>Zabawa z prostymi robotami i podstawami kodowania blokowego. Idealne na start!</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$89 / 4 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Mali odkrywcy technologii">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="course-card searchable-item" data-category="inzynieria" data-age="8-10">
+                            <figure class="course-card-img"><img src="https://images.unsplash.com/photo-1518349619113-03114f06ac3a?q=80&w=400" loading="lazy" decoding="async" alt=""></figure>
+                            <div class="course-card-content">
+                                <div class="course-meta">
+                                    <span class="meta-pill">8–10 lat</span><span class="meta-pill">Inżynieria</span>
+                                </div>
+                                <h3>Inżynieria tworzenia</h3>
+                                <p>Buduj mosty, katapulty i proste maszyny. Poznaj prawa fizyki w praktyce i baw się świetnie.</p>
+                                <div class="course-footer">
+                                    <span class="course-price">$129 / 6 tyg.</span>
+                                    <button class="btn btn-secondary btn-sm kl-open-trial-modal-btn" data-course="Inżynieria tworzenia">Zapisz się</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Shop -->
+            <section id="kl-shop" class="reveal">
+                <div class="kl-promo-bar">Letnia promocja: -10% z kodem STEAM10</div>
+                <div class="container" style="padding-top:60px;">
+                    <div class="section-header">
+                        <h2>Sklep</h2>
+                        <p>Zabierz naukę do domu! Nasze zestawy edukacyjne, książki i gadżety rozwijają pasje także po zajęciach.</p>
+                    </div>
+                    <div class="kl-products-grid">
+                        <div class="product-card searchable-item">
+                            <img src="https://via.placeholder.com/250x200.png?text=Robot" loading="lazy" decoding="async" alt="Zestaw Robot Odkrywca">
+                            <h4>Zestaw Robot Odkrywca</h4>
+                            <span class="product-price">$89</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="p1" data-name="Zestaw Robot Odkrywca" data-price="89">Dodaj do koszyka</button>
+                        </div>
+                        <div class="product-card searchable-item">
+                            <img src="https://via.placeholder.com/250x200.png?text=Książka" loading="lazy" decoding="async" alt="Książka: Przygoda z kodowaniem">
+                            <h4>Książka: Przygoda z kodowaniem</h4>
+                            <span class="product-price">$24</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="p2" data-name="Książka: Przygoda z kodowaniem" data-price="24">Dodaj do koszyka</button>
+                        </div>
+                        <div class="product-card searchable-item">
+                            <img src="https://via.placeholder.com/250x200.png?text=Drukarka" loading="lazy" decoding="async" alt="Mini zestaw drukarki 3D">
+                            <h4>Mini zestaw drukarki 3D</h4>
+                            <span class="product-price">$229</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="p3" data-name="Mini zestaw drukarki 3D" data-price="229">Dodaj do koszyka</button>
+                        </div>
+                        <div class="product-card searchable-item">
+                            <img src="https://via.placeholder.com/250x200.png?text=VR" loading="lazy" decoding="async" alt="VR Studio Sztuki">
+                            <h4>VR Studio Sztuki</h4>
+                            <span class="product-price">$129</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="p4" data-name="VR Studio Sztuki" data-price="129">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Testimonials -->
+            <section id="kl-testimonials" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Co mówią o nas rodzice i dzieci</h2>
+                    </div>
+                    <div class="kl-carousel-wrapper" aria-roledescription="carousel" aria-label="Opinie o Kanatek Land">
+                        <div class="kl-carousel-track">
+                            <div class="kl-testimonial-slide" role="group" aria-label="1 z 4">
+                                <img src="https://i.pravatar.cc/80?u=anna" alt="Anna, mama" loading="lazy" decoding="async">
+                                <div class="stars">★★★★★</div>
+                                <blockquote class="quote">"Zajęcia z robotyki to był strzał w dziesiątkę! Syn nie może doczekać się kolejnych lekcji."</blockquote>
+                                <cite class="author">Anna, Warszawa</cite>
+                            </div>
+                            <div class="kl-testimonial-slide" role="group" aria-label="2 z 4">
+                                <img src="https://i.pravatar.cc/80?u=kuba" alt="Kuba, uczeń" loading="lazy" decoding="async">
+                                <div class="stars">★★★★★</div>
+                                <blockquote class="quote">"Wydrukowałem sobie breloczek do kluczy, który sam zaprojektowałem. To było super!"</blockquote>
+                                <cite class="author">Kuba, 11 lat</cite>
+                            </div>
+                            <div class="kl-testimonial-slide" role="group" aria-label="3 z 4">
+                                <img src="https://i.pravatar.cc/80?u=nowak" alt="Pani Nowak, nauczycielka" loading="lazy" decoding="async">
+                                <div class="stars">★★★★★</div>
+                                <blockquote class="quote">"Profesjonalne podejście i świetny kontakt z dziećmi. Polecam Kanatek Land każdej szkole."</blockquote>
+                                <cite class="author">Pani Nowak, Nauczycielka</cite>
+                            </div>
+                            <div class="kl-testimonial-slide" role="group" aria-label="4 z 4">
+                                <img src="https://i.pravatar.cc/80?u=marek" alt="Marek i Ola, rodzice" loading="lazy" decoding="async">
+                                <div class="stars">★★★★★</div>
+                                <blockquote class="quote">"Córka odkryła pasję do sztuki cyfrowej. Jesteśmy pod wrażeniem jej kreatywności i postępów."</blockquote>
+                                <cite class="author">Marek i Ola</cite>
+                            </div>
+                        </div>
+                        <button class="kl-carousel-btn prev" aria-label="Poprzednia opinia"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="kl-carousel-btn next" aria-label="Następna opinia"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Blog -->
+            <section id="kl-blog" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Blog</h2>
+                        <p>Dzielimy się wiedzą, inspiracjami i nowinkami ze świata STEAM.</p>
+                    </div>
+                    <div class="kl-blog-grid">
+                        <article class="blog-post-card searchable-item">
+                            <img src="https://images.unsplash.com/photo-1593349122359-f220d1804b4c?q=80&w=400" loading="lazy" decoding="async" alt="">
+                            <div class="blog-post-content">
+                                <h3>Najlepsze zabawki STEAM 2025</h3>
+                                <p>Przegląd najciekawszych zabawek edukacyjnych, które łączą naukę z zabawą i rozwijają kluczowe umiejętności.</p>
+                                <a href="#" class="btn btn-secondary btn-sm">Czytaj dalej</a>
+                            </div>
+                        </article>
+                        <article class="blog-post-card searchable-item">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=400" loading="lazy" decoding="async" alt="">
+                            <div class="blog-post-content">
+                                <h3>Jak zacząć programować z dzieckiem</h3>
+                                <p>Praktyczne porady i darmowe narzędzia, które pomogą postawić pierwsze kroki w świecie kodu bez stresu.</p>
+                                <a href="#" class="btn btn-secondary btn-sm">Czytaj dalej</a>
+                            </div>
+                        </article>
+                        <article class="blog-post-card searchable-item">
+                            <img src="https://images.unsplash.com/photo-1617296538902-887900d9b592?q=80&w=400" loading="lazy" decoding="async" alt="">
+                            <div class="blog-post-content">
+                                <h3>Dlaczego druk 3D buduje pewność siebie</h3>
+                                <p>Od pomysłu do fizycznego obiektu - dowiedz się, jak proces tworzenia w 3D wpływa na rozwój dziecka.</p>
+                                <a href="#" class="btn btn-secondary btn-sm">Czytaj dalej</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Contact -->
+            <section id="kl-contact" class="reveal">
+                <div class="container">
+                    <div class="kl-contact-grid">
+                        <div class="contact-info">
+                            <h2>Masz pytania? Skontaktuj się z nami!</h2>
+                            <p>Jesteśmy tu, aby pomóc. Odpowiemy na wszystkie Twoje pytania dotyczące kursów, warsztatów i naszej oferty.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-envelope"></i> kontakt@kanatekland.pl</li>
+                                <li><i class="fa-solid fa-phone"></i> +48 123 456 789</li>
+                                <li><i class="fa-solid fa-map-marker-alt"></i> ul. Innowacji 5, 00-001 Warszawa</li>
+                            </ul>
+                            <div class="social-icons" style="margin-top:20px;">
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="newsletter-form">
+                            <h3>Bądź na bieżąco!</h3>
+                            <p>Zapisz się do naszego newslettera, aby otrzymywać informacje o nowych kursach i promocjach.</p>
+                            <form id="kl-newsletter-form">
+                                <label for="newsletter-email" class="sr-only">Adres e-mail</label>
+                                <input type="email" id="newsletter-email" placeholder="Twój e-mail" required>
+                                <button type="submit" class="btn btn-primary">Zapisz się</button>
+                            </form>
+                            <small role="status" id="newsletter-status"></small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KL Footer -->
+            <footer class="kl-footer">
+                <div class="container">
+                    <div class="kl-footer-content">
+                        <div class="kl-footer-brand">Kanatek Land</div>
+                        <div class="kl-footer-links">
+                            <a href="#kl-about">O nas</a>
+                            <a href="#kl-courses">Kursy</a>
+                            <a href="#kl-blog">Blog</a>
+                        </div>
+                        <button class="btn btn-primary kl-open-trial-modal-btn">Zarezerwuj lekcję</button>
+                    </div>
+                    <div class="kl-copyright">
+                        &copy; <span id="kl-year"></span> Kanatek Land. Wszelkie prawa zastrzeżone.
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- KL Modals -->
+        <dialog id="cart-modal">
+            <header class="cart-header">
+                <h3>Twój koszyk</h3>
+                <button id="close-cart-btn" aria-label="Zamknij koszyk"><i class="fa-solid fa-times"></i></button>
+            </header>
+            <div id="cart-content">
+                <ul id="cart-items-list"></ul>
+                <p id="cart-total">Suma: <strong>$0.00</strong></p>
+                <div id="cart-empty-msg" style="display: none;">Twój koszyk jest pusty.</div>
+                <button class="btn btn-primary" style="width:100%; margin-top:1em;">Przejdź do zamówienia</button>
+            </div>
+        </dialog>
+
+        <dialog id="kl-trial-modal">
+            <form id="kl-trial-form">
+                <h3>Zapisz się na lekcję próbną</h3>
+                <p>Wypełnij formularz, a my skontaktujemy się z Tobą w ciągu 24h.</p>
+                <div class="trial-form-grid">
+                    <div class="form-group">
+                        <label for="parent-name">Imię i nazwisko opiekuna</label>
+                        <input type="text" id="parent-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-email">E-mail</label>
+                        <input type="email" id="parent-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="child-age">Wiek dziecka</label>
+                        <select id="child-age" required>
+                            <option value="">Wybierz...</option>
+                            <option value="5-7">5-7 lat</option>
+                            <option value="8-10">8-10 lat</option>
+                            <option value="11-14">11-14 lat</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="child-interest">Zainteresowanie</label>
+                        <select id="child-interest" required>
+                            <option value="">Wybierz...</option>
+                            <option>Robotyka</option>
+                            <option>Programowanie</option>
+                            <option>Sztuka cyfrowa</option>
+                            <option>Druk 3D</option>
+                             <option>Inżynieria</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-course">Preferowany kurs (opcjonalnie)</label>
+                        <input type="text" id="preferred-course">
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Uwagi</label>
+                        <textarea id="comments" rows="3"></textarea>
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('kl-trial-modal').close()">Anuluj</button>
+                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                </div>
+                <small role="status" id="trial-form-status"></small>
+            </form>
+        </dialog>
+
+        <div id="toast-notification" role="status" aria-live="polite"></div>
+
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ======================= MAŁY NAUKOWIEC LAB PAGE =================== -->
+    <!-- =================================================================== -->
+    <section id="maly-naukowiec-page" style="display:none">
+        <a href="#mnl-main-content" class="sr-only">Przejdź do treści</a>
+        <!-- MNL Header -->
+        <header class="mnl-header">
+            <div class="container">
+                <nav class="mnl-nav" aria-label="Główna nawigacja Mały Naukowiec Lab">
+                    <div class="mnl-brand" role="button" tabindex="0">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <div>
+                            <span>Mały Naukowiec Lab</span>
+                            <small style="display:block; font-size:0.8em; color:var(--muted)">bezpieczne eksperymenty 4–8</small>
+                        </div>
+                    </div>
+                    <ul class="mnl-nav-links" id="mnl-nav-links">
+                        <li><a href="#mnl-hero">Start</a></li>
+                        <li><a href="#mnl-about">O nas</a></li>
+                        <li><a href="#mnl-offer">Nasza oferta</a></li>
+                        <li><a href="#mnl-testimonials">Opinie</a></li>
+                        <li><a href="#mnl-footer">Kontakt</a></li>
+                        <li><a href="#mnl-footer" class="btn btn-primary">Zapytaj o Termin</a></li>
+                    </ul>
+                    <button class="mnl-hamburger" id="mnl-hamburger-btn" aria-expanded="false" aria-controls="mnl-nav-links">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main id="mnl-main-content">
+            <!-- MNL Hero -->
+            <section id="mnl-hero">
+                <div class="container">
+                    <div class="mnl-hero-content">
+                        <div class="mnl-hero-text">
+                            <p class="eyebrow">Dla dzieci 4–8 lat</p>
+                            <h1>Wielka przygoda z nauką czeka!</h1>
+                            <p class="lead">Gwarantujemy uśmiech na twarzy każdego dziecka podczas naszych radosnych, interaktywnych i w 100% bezpiecznych pokazów naukowych oraz warsztatów. Rozbudzamy ciekawość świata przez zabawę!</p>
+                            <div class="cta-buttons">
+                                <a href="#mnl-offer" class="btn btn-primary">Zobacz Naszą Ofertę</a>
+                                <a href="#mnl-footer" class="btn btn-secondary">Zapytaj o Termin</a>
+                                <span class="safety-badge"><i class="fa-solid fa-shield-halved"></i> Bezpieczeństwo przede wszystkim</span>
+                            </div>
+                        </div>
+                        <div class="mnl-hero-image-wrapper">
+                            <img src="./assets/Eksperymenty.jpg" srcset="https://images.unsplash.com/photo-1576015093468-2d5ed6a18a2b?q=80&w=800" alt="Dzieci biorące udział w bezpiecznym eksperymencie naukowym" fetchpriority="high" decoding="async">
+                            <div class="guarantee-card">
+                                😄 Uśmiechy gwarantowane!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MNL About -->
+            <section id="mnl-about" class="reveal">
+                <div class="container">
+                    <div class="mnl-about-grid">
+                        <div class="mnl-about-card">
+                            <i class="fa-solid fa-face-grin-stars"></i>
+                            <h3>Radość i Zabawa</h3>
+                            <p>Nasze pokazy to przede wszystkim świetna zabawa. Uczymy przez śmiech, zdziwienie i interaktywne doświadczenia.</p>
+                        </div>
+                        <div class="mnl-about-card">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h3>100% Bezpieczeństwa</h3>
+                            <p>Wszystkie eksperymenty są starannie przygotowane i prowadzone przez doświadczonych animatorów, z użyciem bezpiecznych materiałów.</p>
+                        </div>
+                        <div class="mnl-about-card">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <h3>Prawdziwa Ciekawość</h3>
+                            <p>Inspirujemy do zadawania pytań i samodzielnego poszukiwania odpowiedzi. Rozbudzamy w dzieciach pasję do odkrywania świata.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MNL Offer -->
+            <section id="mnl-offer" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Nasza oferta</h2>
+                        <p>Organizujemy niezapomniane pokazy, warsztaty i urodziny naukowe w przedszkolach, szkołach i na imprezach prywatnych.</p>
+                    </div>
+                    <div class="mnl-offer-grid">
+                        <article class="mnl-offer-card">
+                            <img src="./assets/pokaz-1.jpg" srcset="https://images.unsplash.com/photo-1605330335799-a5518a4a7a28?q=80&w=600" loading="lazy" decoding="async" alt="Widowiskowy pokaz naukowy z dymem">
+                            <div class="mnl-offer-content">
+                                <span class="offer-badge">Efekt ‘wow’</span>
+                                <h3>Spektakularne Pokazy Naukowe</h3>
+                                <p>Widowiskowe eksperymenty, które zapierają dech w piersiach! Kontrolowane eksplozje, kolorowe reakcje i tajemnicza sucha lód to tylko część atrakcji.</p>
+                                <a href="#mnl-footer" class="btn btn-primary">Zorganizuj Pokaz w Swojej Placówce</a>
+                            </div>
+                        </article>
+                        <article class="mnl-offer-card">
+                            <img src="./assets/Warsztaty.webp" srcset="https://images.unsplash.com/photo-1532619632-34D523345100?q=80&w=600" loading="lazy" decoding="async" alt="Dzieci tworzące glutki na warsztatach">
+                            <div class="mnl-offer-content">
+                                <span class="offer-badge">Praktyka</span>
+                                <h3>Warsztaty „Zrób To Sam”</h3>
+                                <p>Samodzielne tworzenie „glutków”, budowanie wulkanów i konstruowanie prostych obwodów. To najlepsza lekcja kreatywności i logicznego myślenia.</p>
+                                <a href="#mnl-footer" class="btn btn-primary">Poznaj Tematy Warsztatów</a>
+                            </div>
+                        </article>
+                        <article class="mnl-offer-card">
+                            <img src="https://images.unsplash.com/photo-1557993745-a774684325f6?q=80&w=600" loading="lazy" decoding="async" alt="Stół urodzinowy z dekoracjami naukowymi">
+                            <div class="mnl-offer-content">
+                                <span class="offer-badge">Świętowanie</span>
+                                <h3>Niezapomniane Urodziny z Eksperymentami</h3>
+                                <p>Naukowe urodziny to gwarancja kontrolowanych wybuchów, mnóstwa śmiechu i wspomnień na lata. To więcej niż impreza – to przygoda!</p>
+                                <a href="#mnl-footer" class="btn btn-primary">Zaplanuj Naukowe Urodziny</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MNL Testimonials -->
+            <section id="mnl-testimonials" class="reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Zobacz, Dlaczego Jesteśmy Polecani</h2>
+                    </div>
+                    <div class="mnl-carousel" aria-roledescription="carousel" aria-label="Opinie o Małym Naukowcu Lab">
+                        <div id="mnl-slides">
+                            <div class="mnl-slide" role="group" aria-label="1 z 3">
+                                <div class="mnl-quote-box">
+                                    <p>"Dzieci były zachwycone! Pokaz z suchym lodem to absolutny hit. Pełen profesjonalizm i świetne podejście do maluchów. Polecam!"</p>
+                                    <cite class="author">— Katarzyna Nowak, Nauczycielka, Przedszkole nr 5</cite>
+                                </div>
+                            </div>
+                            <div class="mnl-slide" role="group" aria-label="2 z 3">
+                                <div class="mnl-quote-box">
+                                    <p>"Urodziny z Małym Naukowcem to najlepsza impreza, na jakiej byliśmy. Syn i jego koledzy do dziś wspominają wybuchający wulkan."</p>
+                                    <cite class="author">— Tomasz, tata 6-letniego Adama</cite>
+                                </div>
+                            </div>
+                            <div class="mnl-slide" role="group" aria-label="3 z 3">
+                                <div class="mnl-quote-box">
+                                    <p>"Fantastyczne warsztaty, które angażują wszystkie dzieci. Bezpieczne, ciekawe i prowadzone z pasją. Na pewno zaprosimy Państwa ponownie."</p>
+                                    <cite class="author">— Dyrekcja Szkoły Podstawowej nr 2</cite>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mnl-carousel-dots" id="mnl-dots"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- MNL Footer -->
+        <footer id="mnl-footer" class="mnl-footer">
+            <div class="container">
+                <div class="mnl-footer-grid">
+                    <div class="mnl-footer-col">
+                        <h4>Mały Naukowiec Lab</h4>
+                        <p>Rozbudzamy ciekawość i miłość do nauki u najmłodszych poprzez bezpieczne i ekscytujące eksperymenty. Działamy na terenie całej Polski!</p>
+                        <div class="social-icons" style="margin-top:20px;">
+                            <a href="#" aria-label="Facebook" style="font-size: 1.5rem;"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" style="font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="mnl-footer-col">
+                        <h4>Szybkie linki</h4>
+                        <ul>
+                            <li><a href="#mnl-about">O nas</a></li>
+                            <li><a href="#mnl-offer">Oferta</a></li>
+                            <li><a href="#mnl-testimonials">Opinie</a></li>
+                            <li><a href="#">Polityka prywatności</a></li>
+                        </ul>
+                    </div>
+                    <div class="mnl-footer-col">
+                        <h4>Kontakt</h4>
+                        <ul>
+                            <li><a href="mailto:kontakt@malynaukowiec.pl">kontakt@malynaukowiec.pl</a></li>
+                            <li><a href="tel:+48987654321">+48 987 654 321</a></li>
+                        </ul>
+                        <a href="#mnl-footer" class="btn">Zapytaj o Termin</a>
+                    </div>
+                </div>
+                <div class="mnl-subfooter">
+                    &copy; <span id="mnl-year"></span> Mały Naukowiec Lab. Wszelkie prawa zastrzeżone.
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
