@@ -32,7 +32,7 @@
         </header>
 
         <div class="portal-cards">
-            <div class="portal-card" id="portal-mnl" data-target="maly-naukowiec-page" role="button" tabindex="0" aria-label="Przejdź do Mały Naukowiec Lab">
+            <div class="portal-card js-show-section" id="portal-mnl" data-target="maly-naukowiec-page" role="button" tabindex="0">
                 <div class="logo-container">
                     <i class="fa-solid fa-flask-vial"></i>
                 </div>
@@ -40,7 +40,7 @@
                 <p class="tagline">Zbudź w dziecku duszę odkrywcy przez radosne i bezpieczne eksperymenty.</p>
                 <span class="cta-portal">Wejdź do Laboratorium</span>
             </div>
-            <div class="portal-card" id="portal-kl" data-target="kanatek-land-page" role="button" tabindex="0" aria-label="Przejdź do Kanatek Land">
+            <div class="portal-card js-show-section" id="portal-kl" data-target="kanatek-land-page" role="button" tabindex="0">
                 <div class="logo-container">
                     <i class="fa-solid fa-robot"></i>
                 </div>
@@ -70,7 +70,7 @@
                         <li><a href="#kl-courses">Kursy i warsztaty</a></li>
                         <li><a href="#kl-shop">Sklep</a></li>
                         <li><a href="#kl-blog">Blog</a></li>
-                        <li><a href="#kl-contact">Kontakt</a></li>
+                        <a href="#contact-page" class="js-show-section" data-target="contact-page">Kontakt</a>
                     </ul>
                     <div class="kl-nav-actions">
                         <form class="kl-search-form" role="search" id="kl-search-form">
@@ -731,6 +731,45 @@
         </footer>
 
     </section>
+
+    <!-- =================================================================== -->
+    <!-- ======================= CONTACT FORM PAGE ======================= -->
+    <!-- =================================================================== -->
+    <section id="contact-page" style="display:none;">
+        <div class="contact-page-wrapper">
+
+            <!-- Przycisk powrotu, który będzie działał w naszej SPA -->
+            <button class="back-to-portal-btn js-show-section" data-target="portal-page">
+            &larr; Powrót do portalu
+        </button>
+
+            <form class="contact-form-standalone" name="contact-dedicated" method="POST" data-netlify="true" action="/?form-success=true#contact-page">
+                <input type="hidden" name="form-name" value="contact-dedicated" />
+
+                <h2>Skontaktuj się z nami! 🚀</h2>
+
+                <label for="contact-form-name"><span class="icon">⭐</span> Imię i nazwisko</label>
+                <input type="text" id="contact-form-name" name="name" required>
+
+                <label for="contact-form-email"><span class="icon">📧</span> Email</label>
+                <input type="email" id="contact-form-email" name="email" required>
+
+                <label for="contact-form-phone"><span class="icon">📞</span> Telefon (opcjonalnie)</label>
+                <input type="tel" id="contact-form-phone" name="phone">
+
+                <label for="contact-form-subject"><span class="icon">🔍</span> Temat</label>
+                <input type="text" id="contact-form-subject" name="subject" required>
+
+                <label for="contact-form-message"><span class="icon">💬</span> Wiadomość</label>
+                <textarea id="contact-form-message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Wyślij wiadomość</button>
+
+                <div id="contact-page-success-message" role="status" style="margin-top: 20px; text-align: center; color: var(--portal-green); font-weight: bold;"></div>
+            </form>
+        </div>
+    </section>
+
     <script type="module" src="/js/main.js"></script>
 </body>
 

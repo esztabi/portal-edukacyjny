@@ -1550,3 +1550,119 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* =================================================================== */
+        /* =================== DEDICATED CONTACT FORM STYLES ================= */
+        /* =================================================================== */
+        
+        #contact-page {
+            background-color: #FFFBE6;
+            /* Twoje kremowe tło */
+            display: flex;
+            /* Domyślnie flex, zmieniane przez JS */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .contact-page-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 550px;
+        }
+        
+        .back-to-portal-btn {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--muted);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .back-to-portal-btn:hover {
+            color: var(--portal-blue);
+        }
+        
+        .contact-form-standalone {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Glassmorphism */
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-form-standalone:hover {
+            transform: scale(1.02);
+        }
+        
+        .contact-form-standalone h2 {
+            color: var(--portal-blue);
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+        
+        .contact-form-standalone label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        .contact-form-standalone input,
+        .contact-form-standalone textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+            /* Ważne dla spójności */
+        }
+        
+        .contact-form-standalone input:focus,
+        .contact-form-standalone textarea:focus {
+            border-color: var(--portal-blue);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+        
+        .contact-form-standalone button {
+            background-color: var(--portal-green);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+        
+        .contact-form-standalone button:hover {
+            background-color: #218838;
+        }
+        
+        .contact-form-standalone .icon {
+            color: var(--portal-yellow);
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .contact-form-standalone {
+                padding: 20px;
+            }
+        }
