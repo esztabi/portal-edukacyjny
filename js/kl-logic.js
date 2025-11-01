@@ -159,5 +159,10 @@ export function initKanatekLand() {
         });
     }
 
+    const successMessageContainer = document.getElementById('contact-success-message');
+    if (successMessageContainer && window.location.search.includes('form-success=true')) {
+        successMessageContainer.textContent = "Dziękujemy za wiadomość! Odezwiemy się wkrótce.";
+    }
+
     console.log("Kanatek Land logic initialized.");
 }
